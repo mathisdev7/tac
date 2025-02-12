@@ -40,7 +40,7 @@ function SignupComponent() {
   const [name, setName] = useState("");
   const router = useRouter();
 
-  const { isPending, error, data, refetch } = useQuery({
+  const { error, data, refetch } = useQuery({
     queryKey: ["signup", username, name],
     queryFn: () => signup(username, name),
     enabled: false,
